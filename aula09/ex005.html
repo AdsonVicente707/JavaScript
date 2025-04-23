@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios com Dom</title>
+</head>
+<body>
+
+    <h1>Exercicios com Dom</h1>
+    <p>aqui vai o resultado</p>
+    <p>aprendendo a usar  <strong>DOM</strong> em JS</p>
+    <div id="ads">clique em mim</div>
+
+
+    <script>
+        corpo = document.body
+        para = document.getElementsByTagName('p')[1];
+        d = document.getElementById('ads')
+        document.write ('está escrito assim: ' + para.innerText );
+        corpo.style.background = 'black'
+        corpo.style.color = 'white'
+        d.style.background = 'red'
+        d.style.color = 'blue'
+
+        d= document.querySelector('#ads')
+        d.style.fontSize = '30px'
+
+       
+    </script>
+    
+</body>
+</html>
