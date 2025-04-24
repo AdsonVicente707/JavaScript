@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais eventos dom</title>
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+           
+        }
+        body {
+            text-align: center;
+            font-size: 3em;
+            background-image: linear-gradient(to right, #00c6ff, #0072ff);
+        }
+        #bt {
+            background-color: rgb(255, 51, 0);
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+            width: 100px;
+            height: 50px;
+        }
+        input {
+            background-color: rgba(131, 192, 241, 0.685);
+            height: 50px;   
+            width: 100px;
+            margin: 20px;
+            margin-right:30px ;
+            margin-left: 30px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 20px;
+            
+           
+        }
+        #res {
+            margin-top: 39px;
+            font-size: 1,5em;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 1em;
+            
+        }
+    </style>
+
+
+
+<body>
+
+    <h1>Calculando Valores</h1>
+
+    <section>
+        <input type="number" name = "n1" id="n1">+
+        <input type="number" name = "n2" id="n2">=
+        <input type="button" value="somar" onclick="somar()" id="bt">
+    </section>
+
+    <section>
+        <input type="number" name = "n3" id="n3">-
+        <input type="number" name = "n4" id="n4">=
+        <input type="button" value="subtrair" onclick="subtrair()" id="bt">
+    </section>
+    <section>
+        <input type="number" name = "n5" id="n5">*
+        <input type="number" name = "n6" id="n6">=
+        <input type="button" value="multiplicar" onclick="multiplicar()" id="bt">
+    </section>
+    <section>
+        <input type="number" name = "n7" id="n7">/
+        <input type="number" name = "n8" id="n8">=
+        <input type="button" value="dividir" onclick="dividir()" id="bt">
+    </section>
+    <div id="res">resultado</div>
+
+    <script>
+    
+        function somar() {
+            var n1 = document.getElementById('n1')
+            var n2 = document.getElementById('n2')
+            var res = document.getElementById('res')
+            var re1 = Number(n1.value)
+            var re2 = Number(n2.value)
+            var s = re1 + re2 
+            res.innerHTML = `a soma de ${re1} + ${re2} é igual a <strong>${s}</strong>`
+            
+        }
+        function subtrair() {
+            var n3 = document.getElementById('n3')
+            var n4 = document.getElementById('n4')
+            var res = document.getElementById('res')
+            var re3 = Number(n3.value)
+            var re4 = Number(n4.value)
+            var s1 = re3 - re4
+            res.innerHTML = `a subtração de ${re3} - ${re4} é igual a <strong>${s1}</strong>`
+        }
+        function multiplicar() {
+            var n5 = document.getElementById('n5')
+            var n6 = document.getElementById('n6')
+            var res = document.getElementById('res')
+            var re5 = Number(n5.value)
+            var re6 = Number(n6.value)
+            var s2 = re5 * re6 
+            res.innerHTML = `a multiplicação de ${re5} * ${re6} é igual a <strong>${s2}</strong>`
+        }
+        function dividir() {
+            var n7 = document.getElementById('n7')
+            var n8 = document.getElementById('n8')
+            var res = document.getElementById('res')
+            var re7 = Number(n7.value)
+            var re8 = Number(n8.value)
+            var s3 = re7 / re8 
+            res.innerHTML = `a multiplicação de ${re7} / ${re8} é igual a <strong>${s3}</strong>`
+        }
+    </script>
+</body>
+</html>
