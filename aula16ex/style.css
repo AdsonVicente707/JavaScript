@@ -7,10 +7,11 @@ body {
 header {
     color: white;
     font-size: 2em;
+    text-shadow: black 3px 3px 10px;
 }
 section {
     width: 700px;
-    height: 300px;
+    height: 400px;
     background-color: white;
     margin: auto;
     border-radius: 10px;
@@ -26,4 +27,5 @@ select#flista{
 }
 .num {
     padding-top: 30px;
+    font-size: 1.9em;
 }
